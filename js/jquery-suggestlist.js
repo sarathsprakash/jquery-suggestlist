@@ -158,9 +158,7 @@
 			var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
 				$selected = $li.filter( '.suggestlist-selected' ).first();
-		       	if ( val === $selected.text() ) {
-				return;
-		      	}
+		       	
 			//if ( $.inArray( val, this.options.list ) === -1 ) {
 			//	return false;
 		     //	}
@@ -168,7 +166,10 @@
 			this.picker.find( 'li' ).each( function( i, elem ) {
 				if(val.length >0)
 				{
-				if ($( elem ).text().match("^"+val)) {
+					if ( val === $selected.text() ) {
+				return;
+		      	       }
+			      else if ($( elem ).text().match("^"+val)) {
 					
 					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
 				}
