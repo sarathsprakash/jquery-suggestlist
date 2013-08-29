@@ -164,7 +164,7 @@
 			//if ( $.inArray( val, this.options.list ) === -1 ) {
 			//	return false;
 		     //	}
-			$selected.removeClass( 'suggestlist-selected' );
+		      //	$selected.removeClass( 'suggestlist-selected' );
 			this.picker.find( 'li' ).each( function( i, elem ) {
 				if(val.length >0)
 				{
