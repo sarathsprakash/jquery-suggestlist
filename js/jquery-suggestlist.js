@@ -1,5 +1,5 @@
 ( function( $ ) {
-
+	
 	function Suggestlist( element, options ) {
 		var that = this;
 		this.element = $( element ).attr( 'autocomplete', 'off' ).addClass( 'suggestlist-input' );
@@ -19,6 +19,13 @@
 				that.hide();
 			}
 		});
+		$( document ).on( 'mousedown', function ( event ) {
+			// Clicked outside the datepicker, hide it
+			if ( $( event.target ).$(this).parents('.hide').length == 0 ) {
+				that.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
+			}
+		});
+		
 		if ( this.isInput ) {
 			this.element.on( {
 				'focus.suggestlist': $.proxy( this.show, this ),
@@ -34,7 +41,6 @@
 		constructor: Suggestlist,
 
 		click: function() {
-			this.hide();
 			if ( this.picker.is( ':hidden' ) ) {
 				
 				this.show();
