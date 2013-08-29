@@ -155,7 +155,7 @@
 				}
 			}
                       */
-			var val = $.trim( this.element.val() ),
+			var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
 				$selected = $li.filter( '.suggestlist-selected' ).first();
 		       //	if ( val === $selected.text() ) {
@@ -166,7 +166,7 @@
 		     //	}
 			$selected.removeClass( 'suggestlist-selected' );
 			this.picker.find( 'li' ).each( function( i, elem ) {
-				if ( $( elem ).text().match("^"+val)) {
+				if ( $.trim($( elem ).text()).match("^"+val)) {
 					
 					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
 				}
