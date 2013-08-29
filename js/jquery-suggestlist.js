@@ -149,7 +149,7 @@
 		},
 
 		updateLi: function( event ) {
-		      	/*  //Removed code
+		      	/*  
 		      	if ( event ) {
 				var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
 				if ( event.ctrlKey || ! /^[0-9a-z ]$/.test( keyVal ) ) {
@@ -160,9 +160,9 @@
 		        	var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
 			       	
-			       /* //Removed code	
+			      	
 			       $selected = $li.filter('.suggestlist-selected').first();
-		       		if ( val === $selected .text() ) {
+		       	       /*	if ( val === $selected .text() ) {
 				return;
 		      	       }
 		      	       
