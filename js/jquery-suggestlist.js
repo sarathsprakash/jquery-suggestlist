@@ -17,15 +17,10 @@
 			// Clicked outside the datepicker, hide it
 			if ( $( event.target ).closest( '.suggestlist, .suggestlist-input' ).length == 0 ) {
 				that.hide();
+				this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			}
 		});
-		$( document ).on( 'click', function ( event ) {
-			// Clicked outside the datepicker, hide it
-			if($(this.element).parents('.hide').length)
-			{
-			    this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
-			}
-		});
+		
 		
 		if ( this.isInput ) {
 			this.element.on( {
