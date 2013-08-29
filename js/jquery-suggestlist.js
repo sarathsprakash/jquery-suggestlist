@@ -99,7 +99,7 @@
 		hide: function( event ) {
 		        
 			this.picker.hide();
-			if($('input[class="suggestlist"]').is(":hidden")==true)
+			if($('input:text.suggestlist').is(":hidden")==true)
 			this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
