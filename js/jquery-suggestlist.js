@@ -68,7 +68,7 @@
 					this.show();
 					return;
 				}
-			/this.selectNext();
+			this.selectNext();
 				break;
 			case 13: // Enter
 				if ( this.picker.is( ':visible' ) ) {
