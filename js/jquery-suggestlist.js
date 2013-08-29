@@ -34,6 +34,7 @@
 		constructor: Suggestlist,
 
 		click: function() {
+			this.hide();
 			if ( this.picker.is( ':hidden' ) ) {
 				
 				this.show();
