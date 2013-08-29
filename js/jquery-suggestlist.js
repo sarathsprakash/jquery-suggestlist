@@ -166,10 +166,12 @@
 		     //	}
 			$selected.removeClass( 'suggestlist-selected' );
 			this.picker.find( 'li' ).each( function( i, elem ) {
-				if ( $( elem ).text().match(val)) {
+				if ( $( elem ).text().match("^"+val)) {
 					
 					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
 				}
+				else
+				$( elem ).removeClass('suggestlist-selected');
 			} );
 			if ( event ) {
 				this.show();
