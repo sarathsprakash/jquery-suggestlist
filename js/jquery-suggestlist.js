@@ -92,7 +92,7 @@
 		hide: function( event ) {
 		      
 			this.picker.hide();
-			this.picker.remove();
+			
 			this.element.off('.suggestlist').removeData( 'suggestlist' )
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
