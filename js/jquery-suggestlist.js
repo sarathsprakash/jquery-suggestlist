@@ -93,7 +93,7 @@
 		      
 			this.picker.hide();
 			
-			this.element.off('.suggestlist').removeData( 'suggestlist' )
+			this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
 
