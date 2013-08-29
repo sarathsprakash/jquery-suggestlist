@@ -90,7 +90,7 @@
 		},
 
 		hide: function( event ) {
-		       
+		        this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			this.picker.hide();
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
