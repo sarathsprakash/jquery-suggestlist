@@ -99,6 +99,7 @@
 		hide: function( event ) {
 		        
 			this.picker.hide();
+			// For removing old option upon hiding modal box
 			if($('input:text.suggestlist').is(":hidden")==true)
 			this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
@@ -148,22 +149,29 @@
 		},
 
 		updateLi: function( event ) {
+		      	/*  //Removed code
 		      	if ( event ) {
 				var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
 				if ( event.ctrlKey || ! /^[0-9a-z ]$/.test( keyVal ) ) {
 					return;
 				}
-			}
+			}*/
                       
-			var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
+		        	var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
-				$selected = $li.filter('.suggestlist-selected');
-		       		/*if ( val === $selected .text() ) {
+			       	
+			       /* //Removed code	
+			       $selected = $li.filter('.suggestlist-selected').first();
+		       		if ( val === $selected .text() ) {
 				return;
-		      	       }*/
-			//if ( $.inArray( val, this.options.list ) === -1 ) {
-			//	return false;
-		     //	}
+		      	       }
+		      	       
+		         	if ( $.inArray( val, this.options.list ) === -1 ) {
+				return false;
+		              }
+		              */
+		   
+		         /*******Selecting matched listed elements******/
 		      	$li.removeClass( 'suggestlist-selected' );
 			this.picker.find( 'li' ).each( function( i, elem ) {
 				if(val.length >0)
