@@ -168,7 +168,7 @@
 			this.picker.find( 'li' ).each( function( i, elem ) {
 				if ( $( elem ).text().match("^"+val)) {
 					
-					$( elem )..removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
+					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
 				}
 				else
 				$( elem ).removeClass('suggestlist-selected');
