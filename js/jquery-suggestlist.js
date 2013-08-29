@@ -61,14 +61,14 @@
 					this.show();
 					return;
 				}
-			       //	this.selectPrev();
+			       this.selectPrev();
 				break;
 			case 40: // Down
 				if ( this.picker.is( ':not(:visible)' ) ) {
 					this.show();
 					return;
 				}
-			//this.selectNext();
+			this.selectNext();
 				break;
 			case 13: // Enter
 				if ( this.picker.is( ':visible' ) ) {
@@ -90,8 +90,10 @@
 		},
 
 		hide: function( event ) {
-		       // this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
+		      
 			this.picker.hide();
+			this.picker.remove();
+			this.element.off('.suggestlist').removeData( 'suggestlist' )
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
 
