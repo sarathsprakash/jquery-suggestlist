@@ -8,7 +8,6 @@
 		this.isInput = this.element.is( 'input' );
 		this.destroy = function() {
 			that.hide();
-			that.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			that.picker.remove();
 			that.element.off('.suggestlist').removeData( 'suggestlist' )
 		}
@@ -69,6 +68,10 @@
 					this.show();
 					return;
 				}
+				if(this.element.is(':not(:visible)'))
+				{
+				  	this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
+				}
 			this.selectNext();
 				break;
 			case 13: // Enter
@@ -91,7 +94,7 @@
 		},
 
 		hide: function( event ) {
-		      
+		        
 			this.picker.hide();
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
