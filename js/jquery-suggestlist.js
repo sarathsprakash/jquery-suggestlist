@@ -157,14 +157,14 @@
                       
 			var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
-				$selected = $li.filter( '.suggestlist-selected' ).first();
+				$selected = $li.filter( '.suggestlist-selected' );
 		       		/*if ( val === $selected .text() ) {
 				return;
 		      	       }*/
 			//if ( $.inArray( val, this.options.list ) === -1 ) {
 			//	return false;
 		     //	}
-		      //	$selected.removeClass( 'suggestlist-selected' );
+		      	$selected.removeClass( 'suggestlist-selected' );
 			this.picker.find( 'li' ).each( function( i, elem ) {
 				if(val.length >0)
 				{
