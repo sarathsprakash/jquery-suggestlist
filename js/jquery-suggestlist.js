@@ -166,7 +166,7 @@
 			this.picker.find( 'li' ).each( function( i, elem ) {
 				if(val.length >0)
 				{
-					if ( val === $selected.text() ) {
+					if ( val === $( elem ).text() ) {
 				return;
 		      	       }
 			      else if ($( elem ).text().match("^"+val)) {
