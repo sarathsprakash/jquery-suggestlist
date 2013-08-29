@@ -166,12 +166,15 @@
 		     //	}
 			$selected.removeClass( 'suggestlist-selected' );
 			this.picker.find( 'li' ).each( function( i, elem ) {
-				if ( $.trim($( elem ).text()).match("^"+val)) {
+				if(val.length >0)
+				{
+				if ($( elem ).text().match("^"+val)) {
 					
 					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
 				}
 				else
 				$( elem ).removeClass('suggestlist-selected');
+				}
 			} );
 			if ( event ) {
 				this.show();
