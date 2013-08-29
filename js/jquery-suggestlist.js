@@ -148,12 +148,12 @@
 		},
 
 		updateLi: function( event ) {
-		      	if ( event ) {
+		      /*	if ( event ) {
 				var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
 				if ( event.ctrlKey || ! /^[0-9a-z ]$/.test( keyVal ) ) {
 					return;
 				}
-			}
+			}*/
                       
 			var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
