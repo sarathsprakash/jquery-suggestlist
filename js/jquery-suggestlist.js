@@ -35,6 +35,7 @@
 
 		click: function() {
 			if ( this.picker.is( ':hidden' ) ) {
+				this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 				this.show();
 			}
 		},
@@ -89,7 +90,7 @@
 		},
 
 		hide: function( event ) {
-		       this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
+		       
 			this.picker.hide();
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
