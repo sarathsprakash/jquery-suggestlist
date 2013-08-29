@@ -60,7 +60,7 @@
 					this.show();
 					return;
 				}
-				this.selectPrev();
+				//this.selectPrev();
 				break;
 			case 40: // Down
 				if ( this.picker.is( ':not(:visible)' ) ) {
