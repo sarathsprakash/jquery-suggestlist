@@ -167,7 +167,8 @@
 			$selected.removeClass( 'suggestlist-selected' );
 			this.picker.find( 'li' ).each( function( i, elem ) {
 				if ( $( elem ).text().match(val)) {
-					$( elem ).addClass( 'suggestlist-selected' );
+					
+					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
 				}
 			} );
 			if ( event ) {
