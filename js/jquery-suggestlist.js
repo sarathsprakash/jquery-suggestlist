@@ -17,7 +17,7 @@
 			// Clicked outside the datepicker, hide it
 			if ( $( event.target ).closest( '.suggestlist, .suggestlist-input' ).length == 0 ) {
 				that.hide();
-				this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
+				
 			}
 		});
 		
@@ -99,6 +99,7 @@
 		hide: function( event ) {
 		        
 			this.picker.hide();
+			this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
 
