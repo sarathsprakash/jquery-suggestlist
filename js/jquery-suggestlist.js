@@ -35,7 +35,7 @@
 
 		click: function() {
 			if ( this.picker.is( ':hidden' ) ) {
-				this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
+				
 				this.show();
 			}
 		},
