@@ -166,7 +166,7 @@
 			}
 			$selected.removeClass( 'suggestlist-selected' );
 			this.picker.find( 'li' ).each( function( i, elem ) {
-				if ( $( elem ).text().match(val) ) {
+				if ( $( elem ).text() == val {
 					$( elem ).addClass( 'suggestlist-selected' );
 				}
 			} );
