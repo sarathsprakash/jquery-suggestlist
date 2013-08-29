@@ -8,6 +8,7 @@
 		this.isInput = this.element.is( 'input' );
 		this.destroy = function() {
 			that.hide();
+			that.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			that.picker.remove();
 			that.element.off('.suggestlist').removeData( 'suggestlist' )
 		}
@@ -92,8 +93,6 @@
 		hide: function( event ) {
 		      
 			this.picker.hide();
-			
-			this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
 
