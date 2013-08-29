@@ -19,10 +19,11 @@
 				that.hide();
 			}
 		});
-		$( document ).on( 'mousedown', function ( event ) {
+		$( document ).on( 'click', function ( event ) {
 			// Clicked outside the datepicker, hide it
-			if ( $( event.target ).$(this).parents('.hide').length == 0 ) {
-				that.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
+			if($(this.element).parents('.hide').length)
+			{
+			    this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			}
 		});
 		
