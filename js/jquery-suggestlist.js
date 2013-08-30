@@ -100,7 +100,7 @@
 		        
 			this.picker.hide();
 			// For removing old option upon hiding modal box
-			if($('input:text.suggestlist').is(":hidden")==true)
+			if(this.element.is(":hidden")==true)
 			this.picker.find( 'li.suggestlist-selected' ).removeClass( 'suggestlist-selected' );
 			$( window ).off( 'resize', $.proxy( this.place, this ) );
 		},
