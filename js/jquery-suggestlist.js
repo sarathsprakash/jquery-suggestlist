@@ -145,7 +145,7 @@
 		},
 
 		updateVal: function() {
-			this.element.val( this.picker.find( 'li.suggestlist-selected' ).text() );
+			this.element.val( this.picker.find( 'li.suggestlist-selected' ).first().text() );
 			this.hide();
 		},
 
@@ -181,8 +181,7 @@
 			      if ($( elem ).text().match("^"+val)) {
 					
 					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
-				        $selected = $( elem );
-				        return $selected;
+				        
 				}
 				else
 				$( elem ).removeClass('suggestlist-selected');
