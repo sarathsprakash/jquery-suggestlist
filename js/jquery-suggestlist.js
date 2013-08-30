@@ -160,10 +160,10 @@
                       
 		        	var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
-			       		$selected = $li.filter('.suggestlist-selected').first();
-		       	       /*	
+			       $selected = $li.filter('.suggestlist-selected').first();
+		       	       	
 		       	         //Removed Code
-		       	       if ( val === $selected .text() ) {
+		       	       /*if ( val === $selected .text() ) {
 				return;
 		      	       }
 		      	       
@@ -185,6 +185,7 @@
 				else
 				$( elem ).removeClass('suggestlist-selected');
 				}
+				
 			} );
 		             
 			if ( event ) {
