@@ -83,6 +83,10 @@
 					event.preventDefault();
 				}
 				break;
+	                case 8:  if ( this.picker.is( ':visible' ) ) {
+					this.updateLi();
+					event.preventDefault();
+				}		
 			}
 		},
 
