@@ -83,7 +83,7 @@
 					event.preventDefault();
 				}
 				break;
-	               
+			}
 		},
 
 		show: function( event ) {
