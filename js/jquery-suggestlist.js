@@ -139,6 +139,7 @@
 					return;
 				}
 				$target = $selected.removeClass( 'suggestlist-selected' ).prev();
+				
 			}
 			$target.addClass( 'suggestlist-selected' );
 		},
@@ -163,9 +164,9 @@
 			       $selected = $li.filter('.suggestlist-selected').first();
 		       	       	
 		       	         //Removed Code
-		       	       /*if ( val === $selected .text() ) {
+		       	       if ( val.match($selected .text() )) {
 				return;
-		      	       }
+		      	       
 		      	       
 		         	if ( $.inArray( val, this.options.list ) === -1 ) {
 				return false;
