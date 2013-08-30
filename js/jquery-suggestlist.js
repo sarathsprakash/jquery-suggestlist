@@ -188,7 +188,7 @@
 				}
 				
 			} );
-		          
+		          $selected = $li.filter('.suggestlist-selected').first();
 			if ( event ) {
 				this.show();
 			}
