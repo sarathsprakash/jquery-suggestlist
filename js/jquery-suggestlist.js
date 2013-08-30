@@ -161,7 +161,7 @@
                       
 		        	var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
-			        $selected = $li.filter('.suggestlist-selected').first();
+			        //$selected = $li.filter('.suggestlist-selected').first();
 		       	         //Removed Code
 		       	       /*if ($selected.text().match(val)) {
 				return;
