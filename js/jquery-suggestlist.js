@@ -146,19 +146,18 @@
 
 		updateVal: function() {
 			this.element.val( this.picker.find( 'li.suggestlist-selected' ).first().text() );
-			this.picker.find('li').removeClass( 'suggestlist-selected' );
 			this.hide();
 		},
 
 		updateLi: function( event ) {
 		       
 		      	 //Removed Code
-		      	/*if ( event ) {
+		      	//if ( event ) {
 				var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
 				if ( event.ctrlKey || ! /^[0-9a-z ]$/.test( keyVal ) ) {
 					return;
 				}
-		       	}*/
+		       //	}
                       
 		        	var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
