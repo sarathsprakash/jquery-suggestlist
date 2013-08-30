@@ -154,7 +154,7 @@
 		      	 //Removed Code
 		      if ( event ) {
 				var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
-				if ( event.ctrlKey || event.keyCode==13 ) {
+				if ( event.ctrlKey || event.keyCode==13 || event.keyCode==8) {
 					return;
 				}
 			} 
