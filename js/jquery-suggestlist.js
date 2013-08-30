@@ -161,7 +161,7 @@
                       
 		        	var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
-			        //$selected = $li.filter('.suggestlist-selected').first();
+			        $selected = $li.filter('.suggestlist-selected').first();
 		       	         //Removed Code
 		       	       /*if ($selected.text().match(val)) {
 				return;
@@ -181,17 +181,15 @@
 			      if ($( elem ).text().match("^"+val)) {
 					
 					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
-				   
+				        return $( elem );
 				}
 				else
 				$( elem ).removeClass('suggestlist-selected');
 				}
 				
 			} );
-		          $selected = $li.filter('.suggestlist-selected').first();
-		          if ($selected.text().match(val)) {
-				return;
-		       	       }
+		          
+		         
 			if ( event ) {
 				this.show();
 			}
