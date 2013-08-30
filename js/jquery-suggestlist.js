@@ -153,9 +153,9 @@
 		       
 		      	 //Removed Code
 		      if ( event ) {
-				var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
-				if (event.which !== 0 && event.charCode !== 0 && event.which!=8) { 
-					return event.which;
+				//var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
+				if ( event.ctrlKey || event.keyCode==9|| event.keyCode==27 || event.keyCode=40 || event.keyCode==38 || event.keyCode==13 ) {
+					return;
 				}
 			} 
                       
