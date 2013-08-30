@@ -152,12 +152,13 @@
 		updateLi: function( event ) {
 		       
 		      	 //Removed Code
-		      if ( event ) {
+		    if ( event ) {
 				//var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
-		if ( event.ctrlKey || event.which==13 ) {
+				if ( event.ctrlKey || event.which== 13 ) {
 					return;
 				}
-			} 
+			}
+
                       
 		        	var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
