@@ -181,7 +181,8 @@
 			      if ($( elem ).text().match("^"+val)) {
 					
 					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
-				        return $( elem );
+				        $selected = $( elem );
+				        return $selected;
 				}
 				else
 				$( elem ).removeClass('suggestlist-selected');
