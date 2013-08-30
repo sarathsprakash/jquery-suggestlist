@@ -40,7 +40,7 @@
 			if ( this.picker.is( ':hidden' ) ) {
 				
 				this.show();
-			}
+			} 
 		},
 
 		clickLi: function( event ) {
