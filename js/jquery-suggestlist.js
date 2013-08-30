@@ -11,7 +11,7 @@
 			that.picker.remove();
 			that.element.off('.suggestlist').removeData( 'suggestlist' )
 		}
-
+ 
 		this.picker.width( this.element.outerWidth() );
 		$( document ).on( 'mousedown.suggestlist', function ( event ) {
 			// Clicked outside the datepicker, hide it
