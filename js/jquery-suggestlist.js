@@ -189,7 +189,7 @@
 				
 			} );
 		          $selected = $li.filter('.suggestlist-selected').first();
-		          f ($selected.text().match(val)) {
+		          if ($selected.text().match(val)) {
 				return;
 		       	       }
 			if ( event ) {
