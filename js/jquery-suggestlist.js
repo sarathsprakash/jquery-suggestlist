@@ -190,9 +190,9 @@
 			} );
 		          
 		         
-			if ( event ) {
+			/*if ( event ) {
 				this.show();
-			}
+			}*/
 		}
 
 	};
