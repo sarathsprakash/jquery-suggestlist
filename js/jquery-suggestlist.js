@@ -151,12 +151,12 @@
 		updateLi: function( event ) {
 		       
 		      	 //Removed Code
-		      //	if ( event ) {
+		      	if ( event ) {
 				var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
 				if ( event.ctrlKey || ! /^[0-9a-z ]$/.test( keyVal ) ) {
 					return;
 				}
-		       //	}*/
+		       	}
                       
 		        	var val = $.trim( this.element.val() ).replace(/\s+/, ' '),
 				$li = this.picker.find( 'li' ),
@@ -186,7 +186,7 @@
 				$( elem ).removeClass('suggestlist-selected');
 				}
 			} );
-			$selected = $li.filter('.suggestlist-selected').first();
+		             	$selected = $li.filter('.suggestlist-selected').first();
 			if ( event ) {
 				this.show();
 			}
