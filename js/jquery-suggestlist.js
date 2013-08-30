@@ -83,11 +83,7 @@
 					event.preventDefault();
 				}
 				break;
-	                case 8:  if ( this.picker.is( ':visible' ) ) {
-					this.updateLi();
-					event.preventDefault();
-				}		
-			}
+	               
 		},
 
 		show: function( event ) {
@@ -158,7 +154,7 @@
 		      	 //Removed Code
 		      if ( event ) {
 				var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
-				if ( event.ctrlKey || ! /^[0-9a-z ]$/.test( keyVal ) ) {
+				if ( event.ctrlKey || ! /^[0-9a-z ]$/.test( keyVal ) && ! event.which==8 ) {
 					return event.which;
 				}
 			} 
