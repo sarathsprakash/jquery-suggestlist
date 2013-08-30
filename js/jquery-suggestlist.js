@@ -164,10 +164,10 @@
 			       $selected = $li.filter('.suggestlist-selected').first();
 		       	       	
 		       	         //Removed Code
-		       	       if ( val.match($selected .text() )) {
+		       	       /*if ( val.match($selected.text())) {
 				return;
 		       	       }
-		      	       
+		      	       */
 		         /*	if ( $.inArray( val, this.options.list ) === -1 ) {
 				return false;
 		              }
@@ -182,6 +182,7 @@
 			      if ($( elem ).text().match("^"+val)) {
 					
 					$( elem ).removeClass('suggestlist-selected').addClass( 'suggestlist-selected' );
+					return;
 				}
 				else
 				$( elem ).removeClass('suggestlist-selected');
