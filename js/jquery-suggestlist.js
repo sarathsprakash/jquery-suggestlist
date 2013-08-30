@@ -164,10 +164,10 @@
 			       $selected = $li.filter('.suggestlist-selected').first();
 		       	       	
 		       	         //Removed Code
-		       	       if ($selected.text().match(val)) {
+		       	       /*if ($selected.text().match(val)) {
 				return;
 		       	       }
-		      	       
+		      	       */
 		         /*	if ( $.inArray( val, this.options.list ) === -1 ) {
 				return false;
 		              }
