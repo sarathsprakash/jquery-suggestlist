@@ -153,8 +153,8 @@
 		       
 		      	 //Removed Code
 		      if ( event ) {
-				var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
-				if ( event.ctrlKey || event.keyCode==13 || event.keyCode==8) {
+				//var keyVal = String.fromCharCode( event.keyCode ).toLowerCase();
+				if ( event.ctrlKey || event.which==13) {
 					return;
 				}
 			} 
