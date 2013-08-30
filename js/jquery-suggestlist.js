@@ -166,9 +166,9 @@
 		       	         //Removed Code
 		       	       if ( val.match($selected .text() )) {
 				return;
+		       	       }
 		      	       
-		      	       
-		         	if ( $.inArray( val, this.options.list ) === -1 ) {
+		         /*	if ( $.inArray( val, this.options.list ) === -1 ) {
 				return false;
 		              }
 		              */
